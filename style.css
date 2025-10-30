@@ -573,7 +573,7 @@ span {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    box-shadow: 7px 8px 8px white;
+    box-shadow: 1px 2px 8px white;
 }
 
 
