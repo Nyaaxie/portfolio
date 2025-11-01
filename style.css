@@ -143,8 +143,16 @@ span {
     position: relative;
     top: 15px;
     border-radius: 50%;
-    animation: image 5s infinite;
+    animation: homeImage 5s infinite;
 }
+
+
+@keyframes homeImage {
+    50% {
+        box-shadow: 1px 1px 80px rgb(255, 255, 255);
+    }
+}
+
 
 .home-img img {
     position: relative;
@@ -309,17 +317,6 @@ span {
         margin-top: 4rem;
     }
 }
-
-
-/* @media (max-width: 767px) {
-    body {
-        font-size: 16px;
-    }
-
-    .container {
-        width: 100%;
-    }
-} */
 
 
 /* Skills Style Sheet*/
