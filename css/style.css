@@ -23,6 +23,10 @@
 
 html {
     scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 body {
@@ -30,10 +34,14 @@ body {
     background: var(--white);
     color: var(--black);
     overflow-x: hidden;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
-/* NAV - Fixed positioning and background */
-/* Update this block in style.css */
+
 nav {
     position: absolute;
     top: 0;
