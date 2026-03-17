@@ -7,7 +7,7 @@
     <title>James Rey Brizuela – Web Developer</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="/js/main.js" defer></script>
+    <script src="./js/main.js" defer></script>
 </head>
 
 <body>
@@ -208,32 +208,29 @@
                 Have a project in mind or want to collaborate? Feel free to reach out — I'd love to help you build your
                 website, app, or system.
             </p>
+
             <form action="https://formspree.io/f/mlgpodvb" method="POST">
                 <div class="form-row">
                     <div class="form-group">
-                        <label>First Name</label>
-                        <input type="text" name="first_name" placeholder="Juan" required />
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" name="first_name" placeholder="Juan"
+                            autocomplete="given-name" required />
                     </div>
                     <div class="form-group">
-                        <label>Last Name</label>
-                        <input type="text" name="last_name" placeholder="dela Cruz" required />
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" name="last_name" placeholder="dela Cruz"
+                            autocomplete="family-name" required />
                     </div>
                 </div>
                 <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" name="email" placeholder="you@example.com" required />
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email"
+                        required />
                 </div>
                 <div class="form-group">
-                    <label>Message</label>
-                    <textarea name="message" placeholder="Tell me about your project..." required></textarea>
-                </div>
-                <div class="contact-btns">
-                    <button type="submit" class="btn-primary">Send a message</button>
-                    <a class="btn-ghost"
-                        href="mailto:jamesreybrizuela@gmail.com?subject=Project Inquiry&body=Hi James, I saw your portfolio and would like to discuss...">
-                        Email Me
-                    </a>
-
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell me about your project..."
+                        required></textarea>
                 </div>
             </form>
         </div>
