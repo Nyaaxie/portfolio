@@ -5,15 +5,88 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>James Rey Brizuela – Web Developer</title>
+    <link rel="icon" href="data:,">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="./js/main.js" defer></script>
 </head>
 
+<!-- MAILTO MODAL -->
+<div class="modal-overlay" id="mailModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+        <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+        <div class="modal-icon">✉️</div>
+        <h3 id="modalTitle">Send Me an Email</h3>
+        <p>Click below to open your email app with my address pre-filled.</p>
+        <a class="btn-primary modal-mailto"
+            href="mailto:jamesreybrizuela@gmail.com?subject=Project%20Inquiry&body=Hi%20James%2C%20I%27d%20like%20to%20work%20with%20you%20on...">
+            Open Email App
+        </a>
+        <div class="modal-or"><span>or copy address</span></div>
+        <div class="modal-copy-row">
+            <span id="modalEmail">jamesreybrizuela513@gmail.com</span>
+            <button class="btn-copy" id="copyBtn">Copy</button>
+        </div>
+    </div>
+</div>
+
+<!-- PROJECT MODALS -->
+<div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true">
+    <div class="modal-box project-modal-box">
+        <button class="modal-close" id="projectModalClose" aria-label="Close">&times;</button>
+
+        <!-- Image -->
+        <div class="pm-image">
+            <img id="pmImage" src="" alt="" />
+        </div>
+
+        <!-- Header -->
+        <div class="pm-header">
+            <div class="pm-title-row">
+                <h3 id="pmTitle"></h3>
+                <div class="pm-tags" id="pmTags"></div>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="pm-body">
+            <p id="pmDesc"></p>
+
+            <div class="pm-section">
+                <h4>🔧 Tech Stack</h4>
+                <div class="pm-stack" id="pmStack"></div>
+            </div>
+
+            <div class="pm-section">
+                <h4>✨ Key Features</h4>
+                <ul class="pm-features" id="pmFeatures"></ul>
+            </div>
+        </div>
+
+        <!-- Footer Buttons -->
+        <div class="pm-footer">
+            <a class="btn-outline" id="pmGithub" href="#" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i> GitHub
+            </a>
+            <a class="btn-red" id="pmDemo" href="#" target="_blank" rel="noopener">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+            </a>
+        </div>
+    </div>
+</div>
+
 <body>
 
     <!-- NAV -->
     <nav>
+
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+
         <a class="nav-logo" href="#hero">James <span>Brizuela</span></a>
         <ul class="nav-links">
             <li><a href="#hero">Home</a></li>
@@ -73,7 +146,8 @@
                     </div>
                     <div class="project-btns">
                         <a class="btn-outline" href="#">View Details</a>
-                        <a class="btn-red" href="#">Live Demo</a>
+                        <a class="btn-red btn-demo" href="https://strawberry-smp.up.railway.app/"
+                            data-demo="https://strawberry-smp.up.railway.app/">Live Demo</a>
                     </div>
                 </div>
             </div>
@@ -91,7 +165,7 @@
                     </div>
                     <div class="project-btns">
                         <a class="btn-outline" href="#">View Details</a>
-                        <a class="btn-red" href="#">Live Demo</a>
+                        <a class="btn-red btn-demo" href="#" data-demo="">Live Demo</a>
                     </div>
                 </div>
             </div>
@@ -109,7 +183,7 @@
                     </div>
                     <div class="project-btns">
                         <a class="btn-outline" href="#">View Details</a>
-                        <a class="btn-red" href="#">Live Demo</a>
+                        <a class="btn-red btn-demo" href="#" data-demo="">Live Demo</a>
                     </div>
                 </div>
             </div>
@@ -232,6 +306,11 @@
                     <textarea id="message" name="message" placeholder="Tell me about your project..."
                         required></textarea>
                 </div>
+
+                <div class="contact-btns">
+                    <button type="submit" class="btn-primary">Send Message</button>
+                    <a class="btn-ghost" href="mailto:jamesreybrizuela513@gmail.com">Email Directly</a>
+                </div>
             </form>
         </div>
     </section>
@@ -265,7 +344,7 @@
                 <a href="https://facebook.com/james.brizuela.90" title="Facebook"><i
                         class="fa-brands fa-facebook-f"></i></a>
                 <a href="https://github.com/Nyaaxie" title="GitHub"><i class="fa-brands fa-github"></i></a>
-                <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>>
+                <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
     </footer>
